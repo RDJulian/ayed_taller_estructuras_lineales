@@ -40,7 +40,7 @@ void Inventario::guardar_recurso(Recurso recurso) {
         i++;
     }
     if (!guardado) {
-        throw new ExcepcionInventario("El inventario está lleno. No se pudo agregar el recurso.");
+        throw ExcepcionInventario("El inventario está lleno. No se pudo agregar el recurso.");
     }
 }
 

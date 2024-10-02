@@ -25,7 +25,7 @@ Recurso& Vector::operator[](std::size_t indice) {
     if (indice < maximo_logico) {
         return recursos[indice];
     } else {
-        throw new ExcepcionVector("El índice no es válido: " + std::to_string(indice));
+        throw ExcepcionVector("El índice no es válido: " + std::to_string(indice));
     }
 }
 
@@ -35,7 +35,7 @@ void Vector::intercambiar(std::size_t indice_1, std::size_t indice_2) {
         recursos[indice_1] = recursos[indice_2];
         recursos[indice_2] = aux;
     } else {
-        throw new ExcepcionVector(
+        throw ExcepcionVector(
                 "Los índices no son válidos: " + std::to_string(indice_1) + ", " + std::to_string(indice_2));
     }
 }
